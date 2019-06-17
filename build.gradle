@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.icbcom.aistdapsdkjava'
+version '1.0'
+
+compileJava.options.encoding = 'UTF-8'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation 'ru.icbcom.aistdap:aistdap-sdk-java:1.0'
+    runtimeOnly 'org.slf4j:slf4j-simple:1.7.26'
+}
