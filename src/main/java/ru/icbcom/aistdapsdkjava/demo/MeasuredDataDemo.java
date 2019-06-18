@@ -7,9 +7,13 @@ import ru.icbcom.aistdapsdkjava.api.measureddata.MeasuredData;
 
 import java.time.LocalDateTime;
 
+/**
+ * Примеры работы с измерениями.
+ */
 public class MeasuredDataDemo {
 
     public static void main(String[] args) {
+        // Создание клиента для работы с API Aist Dap.
         Client client = Clients.builder()
                 .setBaseUrl("http://127.0.0.1:8080/")
                 .setLogin("Admin")

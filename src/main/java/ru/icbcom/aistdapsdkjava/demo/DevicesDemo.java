@@ -6,9 +6,13 @@ import ru.icbcom.aistdapsdkjava.api.device.Device;
 import ru.icbcom.aistdapsdkjava.api.device.DeviceList;
 import ru.icbcom.aistdapsdkjava.api.objecttype.ObjectType;
 
+/**
+ * Примеры работы с устройствами.
+ */
 public class DevicesDemo {
 
     public static void main(String[] args) {
+        // Создание клиента для работы с API Aist Dap.
         Client client = Clients.builder()
                 .setBaseUrl("http://127.0.0.1:8080/")
                 .setLogin("Admin")

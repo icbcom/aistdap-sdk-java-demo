@@ -8,9 +8,13 @@ import ru.icbcom.aistdapsdkjava.api.objecttype.ObjectType;
 import ru.icbcom.aistdapsdkjava.api.physicalstructure.PhysicalStructureObject;
 import ru.icbcom.aistdapsdkjava.api.physicalstructure.PhysicalStructureObjectList;
 
+/**
+ * Примеры работы с объектами физической структуры.
+ */
 public class PhysicalStructureDemo {
 
     public static void main(String[] args) {
+        // Создание клиента для работы с API Aist Dap.
         Client client = Clients.builder()
                 .setBaseUrl("http://127.0.0.1:8080/")
                 .setLogin("Admin")

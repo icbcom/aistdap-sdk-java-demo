@@ -11,12 +11,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * В данном примере показано как можно получить список устройств привязанных к объектам типа 'Устройство LoRa'.
+ */
 public class LoraWanDevicesDemo {
 
-    public static final long LORA_NETWORK_SERVER_OBJECT_TYPE_ID = 44L;
-    public static final int LORA_WAN_DEVICE_OBJECT_TYPE_ID = 45;
+    private static final long LORA_NETWORK_SERVER_OBJECT_TYPE_ID = 44L;
+    private static final int LORA_WAN_DEVICE_OBJECT_TYPE_ID = 45;
 
     public static void main(String[] args) {
+        // Создание клиента для работы с API Aist Dap.
         Client client = Clients.builder()
                 .setBaseUrl("http://127.0.0.1:8080/")
                 .setLogin("Admin")
@@ -60,7 +64,7 @@ public class LoraWanDevicesDemo {
             devEUIToDevices.put(devEUI, device);
         }
 
-        // Теперь для получения идентификатора устройства в платформе Aist Dap можно использовать соответствующую хэш-таблицу.
+        // Теперь для получения идентификатора устройства в платформе Aist Dap по devEUI можно использовать соответствующую хэш-таблицу.
         Device device = devEUIToDevices.get("00112233AABBCCDD");
         Long deviceId = device.getId();
         System.out.println("Device id: " + deviceId);
